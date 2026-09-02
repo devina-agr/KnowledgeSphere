@@ -1,5 +1,6 @@
 package com.example.knowledgesphere.repository;
 
+import com.example.knowledgesphere.entity.Role;
 import com.example.knowledgesphere.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -11,4 +12,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     boolean existsByEmail(String email);
 
+    boolean existsByRole(Role role);
 }

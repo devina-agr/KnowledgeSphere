@@ -38,12 +38,13 @@ public class Document {
     private Long fileSize;
 
     @Column(length = 1000)
-    private String cloudUrl;
-
-    private String cloudPublicId;
+    private String filePath;
 
     @Enumerated(EnumType.STRING)
     private DocumentStatus status;
+
+    @Column(unique = true)
+    private String fileHash;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uploaded_by")

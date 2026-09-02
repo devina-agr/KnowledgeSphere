@@ -6,6 +6,8 @@ public enum DocumentStatus {
 
     INDEXED,
 
-    FAILED
+    FAILED,
+
+    COMPLETED
 
 }

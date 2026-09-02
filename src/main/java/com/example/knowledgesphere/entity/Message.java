@@ -30,7 +30,7 @@ public class Message {
     private Long id;
 
     @Lob
-    @Column(nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     @Enumerated(EnumType.STRING)
